@@ -124,6 +124,9 @@ RUN rm -rf ${KPI_NODE_PATH} && \
     npm install --quiet && \
     npm cache clean --force
 
+# Manually install missing packages
+RUN npm install @fontsource/roboto @fontsource/roboto-mono @mapbox/leaflet-omnivore alertifyjs backbone backbone-validation classnames fuse.js immutable jquery jquery-ui jszip kobo-common leaflet leaflet.heat leaflet.markercluster lodash.clonedeep lodash.debounce lodash.get lodash.merge lodash.orderby mobx prop-types qrcode.react react-autobind react-cookie react-copy-to-clipboard react-debounce-input react-dnd react-dnd-html5-backend react-document-title react-dom react-dropzone react-mixin react-select react-table react-tagsinput spark-md5 zxcvbn @babel/preset-env @pmmmwh/react-refresh-webpack-plugin @storybook/addon-essentials @types/jquery @types/lodash.clonedeep @types/lodash.merge @types/lodash.orderby @types/qrcode.react @types/react-dom @types/reflux @typescript-eslint/eslint-plugin @typescript-eslint/parser @vusion/webfonts-generator @webpack-cli/serve autoprefixer chai chart.js circular-dependency-plugin coffee-loader coffeelint coffeescript eslint eslint-config-prettier eslint-plugin-react fork-ts-checker-webpack-plugin mocha mocha-chrome moment patch-package postcss postcss-loader prettier react-hot-loader replace-in-file sass sass-loader source-map-loader storybook stylelint typescript webpack webpack-bundle-tracker webpack-cli webpack-dev-middleware webpack-dev-server --quiet
+
 ENV PATH $PATH:${KPI_NODE_PATH}/.bin
 
 ######################
